@@ -1,0 +1,28 @@
+<canvas id='tela' width='600' height='400'></canvas>
+
+<script>
+
+    let tela = document.getElementById('tela')
+    let pincel = tela.getContext('2d')
+
+    pincel.fillStyle = 'purple'
+    pincel.beginPath()
+    pincel.moveTo(50,50)
+    pincel.lineTo(50,400)
+    pincel.lineTo(400,400)
+    pincel.lineTo(50,50)
+    pincel.fill()
+    pincel.strokeStyle = 'black'
+    pincel.stroke()
+
+    pincel.fillStyle = 'limeGreen'
+    pincel.beginPath()
+    pincel.moveTo(100,175)
+    pincel.lineTo(100,350)
+    pincel.lineTo(275,350)
+    pincel.lineTo(100,175)
+    pincel.fill()
+    pincel.strokeStyle = 'blue'
+    pincel.stroke()
+
+</script>

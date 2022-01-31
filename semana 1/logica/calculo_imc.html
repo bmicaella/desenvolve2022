@@ -1,0 +1,32 @@
+<meta charset='UTF-8'>
+
+<script>
+
+function pulaLinha() {
+	document.write('<br><br>')
+}
+
+function mostra(valor) {
+	document.write(valor)
+	pulaLinha()
+}
+
+const calculaImcEMostra = (peso, altura) => {
+	let imc = Math.floor(peso / Math.pow(altura, 2))
+	mostra('IMC --> ' + imc)
+}
+
+let pesoMica = 51.4
+let alturaMica = 1.63
+
+calculaImcEMostra(pesoMica, alturaMica)
+
+function calculaImc(peso, altura) {
+	return Math.floor(peso / Math.pow(altura, 2))
+}
+
+let imcMica = calculaImc(pesoMica, alturaMica)
+
+mostra(imcMica)
+
+</script>

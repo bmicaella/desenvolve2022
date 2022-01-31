@@ -1,0 +1,18 @@
+<meta charset='UTF-8'>
+
+<h2>Média de idades da sua família</h2>
+
+<script>
+	let tamFamilia = Number(prompt('Insira o número de familiares:'))
+	let idadeTotalFamilia = 0
+	
+	for(let i = 0 ; i < tamFamilia ; i++) {
+		idadeTotalFamilia += Number(prompt('Insira a idade:'))	
+	}
+	
+	let mediaIdadeFamilia = Math.floor(idadeTotalFamilia / tamFamilia)
+
+	document.write('<p>Média: ' + mediaIdadeFamilia + '</p>')
+
+
+</script>

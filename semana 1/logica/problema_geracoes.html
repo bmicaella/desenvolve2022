@@ -1,0 +1,21 @@
+<meta charset='UTF-8'>
+
+<script>
+
+function pulaLinha() {
+	document.write('<br><hr><br>')
+}
+
+function mostra(valor) {
+	document.write('<big>'+valor+'</big>')
+	pulaLinha()
+}
+
+let idadeMediaFilhos = 28
+let anoAtual = new Date().getFullYear()
+
+let numeroGeracoes = (anoAtual-1500)/idadeMediaFilhos
+
+mostra(Math.floor(numeroGeracoes))
+
+</script>

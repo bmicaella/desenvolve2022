@@ -1,0 +1,21 @@
+<meta charset='UTF-8'>
+<h2>TABUADA</h2>
+
+<script>
+	let tabuada = Number(prompt('Insira a tabuada que você quer saber'))	
+
+/*
+	let multiplicador = 1
+
+	while(multiplicador <= 10) {
+		let produto = multiplicador * tabuada
+		document.write('|' + tabuada + ' x ' + multiplicador + ' = ' + produto + '<br>')
+		multiplicador++
+	}
+*/
+
+	for(let i = 1 ; i <= 10 ; i++) {
+		let produto = i * tabuada
+		document.write('|' + tabuada + ' x ' + i + ' = ' + produto + '<br>')
+	}
+</script>

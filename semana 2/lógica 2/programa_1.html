@@ -1,0 +1,43 @@
+<canvas width='600' height='400'></canvas>
+
+<script>
+
+    let tela = document.querySelector('canvas')
+    let pincel = tela.getContext('2d')
+    let radius = 10
+
+    pincel.fillStyle = 'darkgrey'
+    pincel.fillRect(0,0,600,400)
+    
+    function drawCircle(e) {
+        
+        console.log(e)
+
+        let x = e.clientX - tela.offsetLeft //diferença entre clientX e pageX?
+        let y = e.clientY - tela.offsetTop
+        
+        pincel.fillStyle = colors[count]
+        pincel.beginPath()
+
+        if(e.shiftKey && radius < 40) radius += 10
+        if(e.ctrlKey && radius > 10) radius -= 10
+        
+        pincel.arc(x, y,radius,0, 6.28)
+        pincel.fill()
+    
+    }
+    
+    let count = 0
+    let colors = ['white', 'gray', 'black']
+
+    function changeColor() {  
+        
+        if(count < colors.length) count++
+        else count = 0
+
+        return false
+    }
+    
+    tela.oncontextmenu = changeColor
+    tela.onclick = drawCircle //nao coloca () pq aí a f seria executada imediatamente e a gnt assim atribui ela ao 'onclick'
+</script>

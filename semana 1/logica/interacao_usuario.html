@@ -1,0 +1,19 @@
+<meta charset='UTF-8'>
+
+<script>
+
+let nomeUsuario = prompt('Informe seu nome:')
+let pesoUsuario = Number(prompt('Informe seu peso:'))
+let alturaUsuario = Number(prompt('Informe sua altura:'))
+
+function calculaImc(altura, peso) {
+	return Math.floor(peso / Math.pow(altura, 2))
+}
+
+let imc = calculaImc(alturaUsuario, pesoUsuario)
+
+document.write(nomeUsuario + 'seu IMC é -->> ' + imc)
+
+if(imc >= 18.5 && <= 35) document.write('showw')
+
+</script>

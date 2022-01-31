@@ -1,0 +1,38 @@
+<canvas id='tela' width='600' height='400'></canvas>
+
+<script>
+
+    let tela = document.getElementById('tela')
+    let pincel = tela.getContext('2d')
+
+    pincel.fillStyle = 'lightgrey'
+    pincel.fillRect(0,0,600,400)
+
+    function desenhaCirculo(x, y, raio, cor) {
+
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2*3.14);
+        pincel.fill();
+
+    }
+
+    function desenhaFlor(x, y) {
+        
+        desenhaCirculo(x,y,20,'rgb(257,125,200)');
+        desenhaCirculo(x-40,y,20,'white');
+        desenhaCirculo(x+40,y,20,'white');
+        desenhaCirculo(x,y-40,20,'limegreen');
+        desenhaCirculo(x,y+40,20,'limegreen');
+
+    }
+
+    pincel.font='20px sans-serif';
+    pincel.fillStyle='black';
+    pincel.fillText("Oii!", 15, 30);
+
+    desenhaFlor(300,200)
+    desenhaFlor(100,200)
+    desenhaFlor(500,200)
+
+</script>

@@ -1,0 +1,40 @@
+<canvas width='600' height='400'></canvas>
+<input type='color'>
+
+<script>
+
+    let color = document.querySelector('input')
+    let tela = document.querySelector('canvas')
+    let pincel = tela.getContext('2d')
+    let radius = 10
+    let draw = false
+
+    pincel.fillStyle = 'darkgrey'
+    pincel.fillRect(0,0,600,400)
+
+    tela.onmousedown = function() { 
+        draw = true 
+    }
+
+    tela.onmouseup = function() {
+        draw = false
+    }
+
+    //rgb(300,106,078)
+
+    tela.onmousemove = function(e) {
+        
+        if(draw) {
+            console.log(e)
+
+            let x = e.clientX - tela.offsetLeft //diferença entre clientX e pageX?
+            let y = e.clientY - tela.offsetTop
+            
+            pincel.fillStyle = color.value
+            pincel.beginPath()
+            pincel.arc(x, y,5,0, 6.28)
+            pincel.fill()
+        }
+    
+    }
+</script>

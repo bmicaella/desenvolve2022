@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<input type='number' value='digite aqui' />
+
+<button id='btn' type='button' onClick=findOut()>Compare com o meu segredo</button>
+
+<script>
+	let segredos = Math.round(Math.random() * 10)
+
+	let input = document.querySelector('input')
+	input.focus()
+
+	//let button = document.querySelector('button')
+
+	function findOut() {
+
+		if(input.value == segredo) alert('você acertou!')
+		else alert('você errou!')
+
+		input.value = ""
+		input.focus()
+	}
+
+	//button.onclick = findOut
+
+</script>
